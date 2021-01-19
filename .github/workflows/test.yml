@@ -3,7 +3,8 @@ name: 这是一个测试配置
 on: 
   schedule:
   - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
-  
+  workflow_dispatch:
+
 jobs:
   build:
     name: My Test
