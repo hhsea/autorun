@@ -1,0 +1,27 @@
+name: 这是一个测试配置
+
+on: 
+  schedule:
+  - cron: 0 2 * * 1-5
+  
+jobs:
+  build:
+    name: My Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Run a one-line script
+      run: echo Hello, world!!!!!!!
+      
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+        echo 测试多行
+        
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
